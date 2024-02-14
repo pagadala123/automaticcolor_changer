@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            width: auto;
+            height: auto;
+           }
+           h2{
+            justify-content: center;
+            align-items: center;
+            margin: 20%;
+            padding: 10px 10px;
+            color:black;
+           }
+    </style>
+
+</head>
+<body>
+    <h2>Automatic Color Changer: <span class="color"></span> </h2>
+    
+    <script>
+        function array(){
+        let colorsArray=["pink","green","yellow","red","aqua","purple"]
+        let index= Math.floor(Math.random()*colorsArray.length);
+        let color =document.querySelector(".color");
+        document.body.style.backgroundColor =colorsArray[index];
+        color.innerHTML=colorsArray[index];
+
+    }
+    setInterval(array,1000)
+    
+    </script>
+    
+</body>
+</html>
